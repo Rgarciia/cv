@@ -46,16 +46,16 @@
     <style>
     body{
     top:0 !important;
-}
-.goog-te-banner-frame {
-    display: none;
-    height: 0 !important;
-    visibility: hidden
-}
+    }
+    .goog-te-banner-frame {
+        display: none;
+        height: 0 !important;
+        visibility: hidden
+    }
 
-#google_translate_element {
-    display: block;
-}
+    #google_translate_element {
+        display: block;
+    }
     </style>
 
 </head>
@@ -107,14 +107,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#mh-contact">CONTACTO</a>
                             </li>
-			    <li class="nav-item">
-	<!--			<select>
-    <option class="dropdown-item languageOption selectedLang" href="javascript:void(0)" data-lang="en" data-text="English"> English</option>
-    <option class="dropdown-item languageOption notSelectedLang" href="javascript:void(0)" data-lang="es" data-text="Espanol"> Espanol</option>
-   <option class="dropdown-item languageOption notSelectedLang" href="javascript:void(0)" data-lang="fr" data-text="French"> French</option>
-	</select>-->
-				<div id="google_translate_element"></div>
-			    </li>
+                            <li class="nav-item">
+                                <div id="google_translate_element"></div>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -1406,10 +1401,6 @@
     <script src="assets/js/custom-scripts.js"></script>
 
 
-    <!-- ****************
-      After neccessary customization/modification, Please minify 
-      JavaScript/jQuery according to http://browserdiet.com/en/ for better performance
-    **************** -->
     <!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
     <link rel="stylesheet" href="demo/demo.css">
     <script type="text/javascript" src="demo/styleswitcher.js"></script>
@@ -1455,9 +1446,7 @@
    $(document).ready(function () {
     $(document).on('click', '.languageOption', function () {
       var value = $(this).attr("data-lang");
-
       updateLanguage(value);
-
     })
 
 
@@ -1477,7 +1466,6 @@
         case "pt":
           selectIndex = 2;
           break;
-
       }
       a.selectedIndex = selectIndex;
       a.dispatchEvent(new Event('change'));
