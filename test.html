@@ -1406,6 +1406,11 @@
     <script type="text/javascript" src="demo/styleswitcher.js"></script>
     <script type="text/javascript" src="demo/demo.js"></script>
     <script>
+        alert();
+        var a = document.querySelector("#google_translate_element select");
+        a.selectedIndex = "";
+    </script>
+    <script>
         var calcula = 0;
         var objeto = new Date();
         var dia = objeto.getDate();
@@ -1456,9 +1461,6 @@
       switch (value) {
         case "en":
           selectIndex = 0;
-        break;
-        case "":
-          selectIndex = "";
         break;
       }
       a.selectedIndex = selectIndex;
