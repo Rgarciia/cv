@@ -1427,7 +1427,7 @@
        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
      }*/
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+      new google.translate.TranslateElement({ includedLanguages: 'en,es,fr,pt', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
     }
 
     function triggerHtmlEvent(element, eventName) {
@@ -1456,6 +1456,15 @@
       switch (value) {
         case "en":
           selectIndex = 0;
+          break;
+        case "es":
+          selectIndex = 3;
+          break;
+        case "fr":
+          selectIndex = 1;
+          break;
+        case "pt":
+          selectIndex = 2;
           break;
       }
       a.selectedIndex = selectIndex;
