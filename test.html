@@ -1456,7 +1456,10 @@
       switch (value) {
         case "en":
           selectIndex = 0;
-          break;
+        break;
+        case "":
+          selectIndex = "";
+        break;
       }
       a.selectedIndex = selectIndex;
       a.dispatchEvent(new Event('change'));
