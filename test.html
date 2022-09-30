@@ -1427,7 +1427,7 @@
        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
      }*/
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+      new google.translate.TranslateElement({ includedLanguages: 'en,es,fr,pt', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
     }
 
     function triggerHtmlEvent(element, eventName) {
@@ -1454,9 +1454,18 @@
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           switch (value) {
-            case "en":
-              selectIndex = 0;
-            break;
+              case "en":
+                  selectIndex = 0;
+                  break;
+              case "es":
+                  selectIndex = 3;
+                  break;
+              case "fr":
+                  selectIndex = 1;
+                  break;
+              case "pt":
+                  selectIndex = 2;
+                  break;
           }
           a.selectedIndex = selectIndex;
           a.dispatchEvent(new Event('change'));
