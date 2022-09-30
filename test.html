@@ -1406,11 +1406,6 @@
     <script type="text/javascript" src="demo/styleswitcher.js"></script>
     <script type="text/javascript" src="demo/demo.js"></script>
     <script>
-        var lang = document.querySelector("#google_translate_element select");
-        console.log(lang);
-        lang.selectedIndex = "esp";
-    </script>
-    <script>
         var calcula = 0;
         var objeto = new Date();
         var dia = objeto.getDate();
@@ -1449,24 +1444,29 @@
   }
   
    $(document).ready(function () {
-    $(document).on('click', '.languageOption', function () {
-      var value = $(this).attr("data-lang");
-      updateLanguage(value);
-    })
+        $(document).on('click', '.languageOption', function () {
+          var value = $(this).attr("data-lang");
+          updateLanguage(value);
+        })
 
 
-    function updateLanguage(value) {
-      var selectIndex = 0;
-      var a = document.querySelector("#google_translate_element select");
-      switch (value) {
-        case "en":
-          selectIndex = 0;
-        break;
-      }
-      a.selectedIndex = selectIndex;
-      a.dispatchEvent(new Event('change'));
-    }
-  })
+        function updateLanguage(value) {
+          var selectIndex = 0;
+          var a = document.querySelector("#google_translate_element select");
+          switch (value) {
+            case "en":
+              selectIndex = 0;
+            break;
+          }
+          a.selectedIndex = selectIndex;
+          a.dispatchEvent(new Event('change'));
+        }
+   })
+    </script>
+    <script>
+        var lang = document.querySelector("#google_translate_element select");
+        console.log(lang);
+        lang.selectedIndex = "";
     </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
