@@ -1432,6 +1432,7 @@
 
     function triggerHtmlEvent(element, eventName) {
     var event;
+    console.log(event);
     if (document.createEvent) {
       event = document.createEvent('HTMLEvents');
       event.initEvent(eventName, true, true);
@@ -1451,7 +1452,6 @@
 
 
        function updateLanguage(value) {
-            console.log('entra');
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           switch (value) {
