@@ -132,7 +132,7 @@
                                 <span>OBJETIVO</span>
                             </div>
 
-                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s" readonly="readonly">Full-Stack Developer
+                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Full-Stack Developer
                             </h2>
                             <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">(JavaScript,
                                 Node.js, PHP, etc.) + DevOps con experiencia práctica en diversas áreas de TI.</h4>
@@ -1447,10 +1447,11 @@
         $(document).on('click', '.languageOption', function () {
           var value = $(this).attr("data-lang");
           updateLanguage(value);
+          console.log(value);
         })
 
 
-        function updateLanguage(value) {
+       function updateLanguage(value) {
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           switch (value) {
