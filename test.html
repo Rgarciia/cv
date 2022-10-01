@@ -1446,12 +1446,12 @@
    $(document).ready(function () {
         $(document).on('click', '.languageOption', function () {
           var value = $(this).attr("data-lang");
-          console.log(value);
           updateLanguage(value);
         })
 
 
        function updateLanguage(value) {
+            console.log('entra');
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           switch (value) {
