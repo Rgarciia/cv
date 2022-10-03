@@ -1424,6 +1424,7 @@
 
     <script type="text/javascript">
      window.onload = function httpGet() {
+         document.getElementById('fileCV').style.display = 'none';
          var xmlHttp = new XMLHttpRequest();
          xmlHttp.open( "GET", coockie.php, false );
      }
@@ -1458,7 +1459,6 @@
           switch (value) {
               case "en":
                   selectIndex = 1;
-                  document.getElementById('fileCV').style.display = 'none';
                   break;
           }
           a.selectedIndex = selectIndex;
