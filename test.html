@@ -1453,12 +1453,12 @@
 
 
        function updateLanguage(value) {
-          document.getElementById('fileCV').style.display = 'none';
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           switch (value) {
               case "en":
                   selectIndex = 1;
+                  document.getElementById('fileCV').style.display = 'none';
                   break;
           }
           a.selectedIndex = selectIndex;
