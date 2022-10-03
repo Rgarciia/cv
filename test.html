@@ -1455,10 +1455,10 @@
        function updateLanguage(value) {
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
+          document.getElementById('fileCV').style.display = 'none';
           switch (value) {
               case "en":
                   selectIndex = 1;
-                  document.getElementById('fileCV').style.display = 'none';
                   break;
           }
           a.selectedIndex = selectIndex;
