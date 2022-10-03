@@ -222,7 +222,7 @@
                                 <li><span>Administración de Sistemas</span></li>
                             </ul>
                         </div>
-                        <a href="assets/cv.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s"
+                        <a href="assets/cv.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" id="fileCV"
                             data-wow-delay="0.4s" download="BrandonReneRezaGarciaCV" >Descargar CV <i class="fa fa-download"></i></a>
                     </div>
                 </div>
@@ -1453,7 +1453,7 @@
 
 
        function updateLanguage(value) {
-            alert();
+          document.getElementById('fileCV').style.display = 'none';
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           switch (value) {
