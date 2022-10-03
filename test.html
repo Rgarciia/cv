@@ -1423,7 +1423,12 @@
     </script>
 
     <script type="text/javascript">
-     window.onload = setcookie('googtrans', '/en/pt');
+     window.onload = function googleTranslateElementInitDefault() {
+         setCookie('googtrans', '/en/pt',1);
+         new google.translate.TranslateElement({
+             pageLanguage: 'es'
+         }, 'google_translate_element');
+     }
             /*function googleTranslateElementInit() {
               new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
             }*/
