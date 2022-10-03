@@ -1449,11 +1449,11 @@
         $(document).on('click', '.languageOption', function () {
           var value = $(this).attr("data-lang");
           updateLanguage(value);
-          alert();
         })
 
 
        function updateLanguage(value) {
+            alert();
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           switch (value) {
