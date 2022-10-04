@@ -1432,8 +1432,14 @@
       new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
     }
 
-     var language = $("select.goog-te-combo option:selected").text();
-     alert(language);
+     $('.goog-te-combo').live('change',function(){
+         getSelectedlang();
+     });
+
+     function getSelectedlang(){
+         language = $("select.goog-te-combo option:selected").text();
+         alert(language);
+     }
 
     function triggerHtmlEvent(element, eventName) {
     var event;
