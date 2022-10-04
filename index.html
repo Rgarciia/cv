@@ -1438,13 +1438,13 @@
      var el=document.getElementsByClassName('goog-te-menu-value')[0];
          if(el && el.innerText!==translatedText){
              translatedText=el.innerText;
-             console.log(translatedText);
-             /*if(translatedText == ' '){
-                 a.setAttribute("download", '#');
+             console.log(el);
+             if(translatedText == 'Inglés​▼'){
+                 //a.setAttribute("download", '#');
                  a.style.display = 'block';
              }else{
                  a.style.display = 'none';
-             }*/
+             }
          }
      },200);
 
