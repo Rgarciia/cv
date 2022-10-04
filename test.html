@@ -1446,7 +1446,6 @@
   }
   
    $(document).ready(function () {
-       alert();
         $(document).on('click', '.languageOption', function () {
           var value = $(this).attr("data-lang");
           updateLanguage(value);
@@ -1454,6 +1453,7 @@
 
 
        function updateLanguage(value) {
+           console.log(readCookie('googtrans'));
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           document.getElementById('fileCV').style.display = 'none';
