@@ -1448,8 +1448,6 @@
   
    $(document).ready(function () {
         $(document).on('click', '.languageOption', function () {
-            var language = $("select.goog-te-combo option:selected").text();
-            alert(language);
           var value = $(this).attr("data-lang");
           updateLanguage(value);
         })
