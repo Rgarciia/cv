@@ -1424,6 +1424,7 @@
 
     <script type="text/javascript">
      window.onload = function httpGet() {
+         console.log(readCookie('googtrans'));
          var xmlHttp = new XMLHttpRequest();
          xmlHttp.open( "GET", coockie.php, false );
      }
@@ -1453,7 +1454,6 @@
 
 
        function updateLanguage(value) {
-           console.log(readCookie('googtrans'));
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
           document.getElementById('fileCV').style.display = 'none';
