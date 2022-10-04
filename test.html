@@ -1423,8 +1423,6 @@
     </script>
 
     <script type="text/javascript">
-     var cook = readCookie('googtrans')
-
      window.onload = function httpGet() {
          var xmlHttp = new XMLHttpRequest();
          xmlHttp.open( "GET", coockie.php, false );
@@ -1434,7 +1432,8 @@
       new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
     }
 
- ;
+     var language = $("select.goog-te-combo option:selected").text();
+     alert(language);
 
     function triggerHtmlEvent(element, eventName) {
     var event;
