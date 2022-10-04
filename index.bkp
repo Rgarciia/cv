@@ -42,22 +42,6 @@
     <link rel="alternate stylesheet" href="assets/css/colors/slate.css" title="slate">
     <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow">
 
-    <!--Style BTN Google Translate-->
-    <style>
-    body{
-    top:0 !important;
-    }
-    .goog-te-banner-frame {
-        display: none;
-        height: 0 !important;
-        visibility: hidden
-    }
-
-    #google_translate_element {
-        display: block;
-    }
-    </style>
-
 </head>
 
 <body class="dark-vertion black-bg">
@@ -106,9 +90,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#mh-contact">CONTACTO</a>
-                            </li>
-                            <li class="nav-item">
-                                <div id="google_translate_element" style="width: 10px;"></div>
                             </li>
                         </ul>
                     </div>
@@ -222,7 +203,7 @@
                                 <li><span>Administración de Sistemas</span></li>
                             </ul>
                         </div>
-                        <a href="assets/cv.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" id="fileCV"
+                        <a href="assets/cv.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s"
                             data-wow-delay="0.4s" download="BrandonReneRezaGarciaCV" >Descargar CV <i class="fa fa-download"></i></a>
                     </div>
                 </div>
@@ -1401,6 +1382,10 @@
     <script src="assets/js/custom-scripts.js"></script>
 
 
+    <!-- ****************
+      After neccessary customization/modification, Please minify 
+      JavaScript/jQuery according to http://browserdiet.com/en/ for better performance
+    **************** -->
     <!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
     <link rel="stylesheet" href="demo/demo.css">
     <script type="text/javascript" src="demo/styleswitcher.js"></script>
@@ -1421,65 +1406,6 @@
         }
         document.getElementById('edad').innerHTML = calcula + ' Años';
     </script>
-
-    <script type="text/javascript">
-     window.onload = function httpGet() {
-         var xmlHttp = new XMLHttpRequest();
-         xmlHttp.open( "GET", coockie.php, false );
-     }
-
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
-    }
-
-     var translatedText='';
-     var a = document.getElementById("fileCV");
-
-         var el=document.getElementsByClassName('goog-te-menu-value')[0];
-         if(el && el.innerText!==translatedText){
-             translatedText=el.innerText;
-             if(translatedText == 'Inglés'){
-                // a.setAttribute("download", '#');
-                 a.style.display = 'none';
-             }
-         }
-
-
-
-    function triggerHtmlEvent(element, eventName) {
-    var event;
-    if (document.createEvent) {
-      event = document.createEvent('HTMLEvents');
-      event.initEvent(eventName, true, true);
-      element.dispatchEvent(event);
-    } else {
-      event = document.createEventObject();
-      event.eventType = eventName;
-      element.fireEvent('on' + event.eventType, event);
-    }
-  }
-  
-   $(document).ready(function () {
-        $(document).on('click', '.languageOption', function () {
-          var value = $(this).attr("data-lang");
-          updateLanguage(value);
-        })
-
-       function updateLanguage(value) {
-          var selectIndex = 0;
-          var a = document.querySelector("#google_translate_element select");
-          switch (value) {
-              case "en":
-                  selectIndex = 1;
-                  break;
-          }
-          a.selectedIndex = selectIndex;
-          a.dispatchEvent(new Event('change'));
-        }
-   })
-    </script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
