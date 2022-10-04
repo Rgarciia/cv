@@ -1433,16 +1433,14 @@
     }
 
      var translatedText='';
+     var a = document.getElementById("fileCV");
      var interval=setInterval(function(){
          var el=document.getElementsByClassName('goog-te-menu-value')[0];
          if(el && el.innerText!==translatedText){
              translatedText=el.innerText;
-             if(translatedText == 'Inglés'){
-                 document.getElementById('fileCV').style.display = 'none';
-             }else{
-                 document.getElementById('fileCV').style.display = 'block';
+             if(translatedText != 'Español'){
+                 a.setAttribute("download", '#');
              }
-             console.log(translatedText);
          }
      },200);
 
