@@ -1436,7 +1436,7 @@
 
  ;
     if (cook != '%2Fen%2Fes'){
-        alert();
+        alert(cook);
         document.getElementById('fileCV').style.display = 'none';
     }
 
@@ -1455,6 +1455,7 @@
   
    $(document).ready(function () {
         $(document).on('click', '.languageOption', function () {
+            alert(cook);
           var value = $(this).attr("data-lang");
           updateLanguage(value);
         })
