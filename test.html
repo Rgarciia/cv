@@ -1432,7 +1432,9 @@
       new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
     }
 
-     console.log(readCookie('googtrans'));
+    if (readCookie('googtrans') != '%2Fen%2Fes'){
+        document.getElementById('fileCV').style.display = 'none';
+    }
 
     function triggerHtmlEvent(element, eventName) {
     var event;
@@ -1457,7 +1459,6 @@
        function updateLanguage(value) {
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
-          document.getElementById('fileCV').style.display = 'none';
           switch (value) {
               case "en":
                   selectIndex = 1;
