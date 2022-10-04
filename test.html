@@ -1424,7 +1424,6 @@
 
     <script type="text/javascript">
      window.onload = function httpGet() {
-         console.log(readCookie('googtrans'));
          var xmlHttp = new XMLHttpRequest();
          xmlHttp.open( "GET", coockie.php, false );
      }
@@ -1432,6 +1431,8 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
     }
+
+     console.log(readCookie('googtrans'));
 
     function triggerHtmlEvent(element, eventName) {
     var event;
