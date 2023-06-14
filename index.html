@@ -166,7 +166,7 @@
                     <div class="col-sm-6">
                         <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                             <div class="img-border">
-                                <img src="assets/images/heroC.jpg" alt="" class="img-fluid">
+                                <img src="assets/images/profile.png" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -222,8 +222,8 @@
                                 <li><span>Administración de Sistemas</span></li>
                             </ul>
                         </div>
-                        <a href="assets/cv.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" id="fileCV"
-                            data-wow-delay="0.4s" download="BrandonReneRezaGarciaCV" >Descargar CV <i class="fa fa-download"></i></a>
+                        <a href="assets/cv-es.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" id="fileCV"
+                            data-wow-delay="0.4s" target="_blank" download="BrandonReneRezaGarciaCV" >Descargar CV <i class="fa fa-download"></i></a>
                     </div>
                 </div>
             </div>
@@ -557,8 +557,30 @@
                                 <!-- Education Institutes-->
                                 <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
                                     data-wow-delay="0.4s">
+                                    <h4>Software Engineer <a href="https://www.hsbc.com.mx/" target="_blank">HSBC México</a></h4>
+                                    <div class="mh-eduyear">Julio 2022 - Actualmente</div>
+                                    <span>Responsabilidad :</span>
+                                    <ul class="work-responsibility">
+                                        <li><i class="fa fa-circle"></i>Solutions Architect.</li>
+                                        <li><i class="fa fa-circle"></i>Technical Lead.</li>
+                                    </ul>
+                                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s"
+                                        data-wow-delay="0.3s" style="text-align: center">
+                                        <ul>
+                                            <li><span>Jira</span></li>
+                                            <li><span>Counflence</span></li>
+                                            <li><span>Visio</span></li>
+                                            <li><span>AWS</span></li>
+                                            <li><span>Nexus</span></li>
+                                            <li><span>Jenkins</span></li>
+                                            <li><span>IBM Personal Comunications</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                                    data-wow-delay="0.4s">
                                     <h4>Consultor de Aplicaciones <a href="https://www.novis.com.mx/" target="_blank">Novis</a></h4>
-                                    <div class="mh-eduyear">Agosto 2019 - Agosto 2022</div>
+                                    <div class="mh-eduyear">Agosto 2019 - Julio 2022</div>
                                     <span>Responsabilidad :</span>
                                     <ul class="work-responsibility">
                                         <li><i class="fa fa-circle"></i>Desarrollo Web.</li>
@@ -1469,6 +1491,7 @@
        function updateLanguage(value) {
           var selectIndex = 0;
           var a = document.querySelector("#google_translate_element select");
+
           switch (value) {
               case "en":
                   selectIndex = 1;

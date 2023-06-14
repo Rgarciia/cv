@@ -527,10 +527,10 @@ ul {
   background-position: center center; }
 
 .home-2-img {
-  background-image: url(../images/home-bg-img.jpg); }
+  background-image: url(../images/home-bg-img1.jpg); }
 
 .featured-img-one {
-  background-image: url(../images/home-bg-img.jpg); }
+  background-image: url(../images/home-bg-img1.jpg); }
 
 .featured-img-two {
   background-image: url(../images/extra-feature-bg.jpg); }
@@ -746,7 +746,7 @@ button {
   .dark-vertion .nav-strict {
     background-color: #202026; }
   .dark-vertion .img-color-overlay {
-    background-color: rgba(0, 0, 0, 0.9); }
+    background-color: rgba(0, 0, 0, 0.6); }
   .dark-vertion .mh-home .mh-header-info .social-icon li .fa:hover {
     background-color: #fff; }
   .dark-vertion .page-item.active .page-link {
@@ -954,7 +954,7 @@ body {
   padding-top: 30px; }
 
 .home-padding {
-  padding: 180px 0; }
+  padding: 240px 0; }
 
 /*
     ==============
