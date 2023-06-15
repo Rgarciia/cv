@@ -56,7 +56,8 @@
     #google_translate_element {
         display: block;
     }
-    </style>
+
+   </style>
 
 </head>
 
@@ -1444,63 +1445,45 @@
     </script>
 
     <script type="text/javascript">
+    
      window.onload = function httpGet() {
-         var xmlHttp = new XMLHttpRequest();
-         xmlHttp.open( "GET", coockie.php, false );
+         var xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+    }
+  };
+  xhttp.open("GET", "coockie.php", true);
+  xhttp.send();
      }
 
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
-    }
+      //new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+	    new google.translate.TranslateElement({ pageLanguage: "es", includedLanguages : 'en'}, "google_translate_element");
+	    var $googleDiv = $("#google_translate_element .skiptranslate");
+  var $googleDivChild = $("#google_translate_element .skiptranslate div");
+  $googleDivChild.next().remove();
 
-     var translatedText='';
-     var a = document.getElementById("fileCV");
-     var interval=setInterval(function(){
-     var el=document.getElementsByClassName('goog-te-menu-value')[0];
-         if(el && el.innerText!==translatedText){
-             translatedText=el.innerText;
-             console.log(el);
-             /*if(translatedText == 'Inglés▼'){
-                 //a.setAttribute("download", '#');
-                 a.style.display = 'none';
-             }else{
-                 a.style.display = 'block';
-             }*/
-         }
-     },200);
-
-     function triggerHtmlEvent(element, eventName) {
-    var event;
-    if (document.createEvent) {
-      event = document.createEvent('HTMLEvents');
-      event.initEvent(eventName, true, true);
-      element.dispatchEvent(event);
-    } else {
-      event = document.createEventObject();
-      event.eventType = eventName;
-      element.fireEvent('on' + event.eventType, event);
+  $googleDiv.contents().filter(function(){
+  	return this.nodeType === 3 && $.trim(this.nodeValue) !== '';
+  }).remove();
     }
-  }
   
-   $(document).ready(function () {
-        $(document).on('click', '.languageOption', function () {
-          var value = $(this).attr("data-lang");
-          updateLanguage(value);
-        })
+  $(document).ready(function () {
+     $(document).on('change','.goog-te-combo',function(){
+      var cvFile = document.getElementById("fileCV");
+      var val = $('option:selected',this).val()
+	     //console.log(val);
+	     if(val=='en'){
+		cvFile.setAttribute('href', 'assets/cv-en.pdf');
+	     }else if(val=='es'){
+                cvFile.setAttribute('href', 'assets/cv-es.pdf');
+	     }
+     });
+  });
 
-       function updateLanguage(value) {
-          var selectIndex = 0;
-          var a = document.querySelector("#google_translate_element select");
+	   
 
-          switch (value) {
-              case "en":
-                  selectIndex = 1;
-                  break;
-          }
-          a.selectedIndex = selectIndex;
-          a.dispatchEvent(new Event('change'));
-        }
-   })
     </script>
 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
