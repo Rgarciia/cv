@@ -1445,13 +1445,14 @@
             calcula = parseInt(hoy - myArray[0]);
         }
         document.getElementById('edad').innerHTML = calcula + ' Años';
-        var x = document.getElementById("myAudio").autoplay;
-        console.log(x);
+        
     </script>
 
     <script type="text/javascript">
     
      window.onload = function httpGet() {
+        var x = document.getElementById("myAudio").autoplay;
+        console.log(x);
 	 var xhttp = new XMLHttpRequest();
          xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -1486,7 +1487,6 @@
 	     }
      });
   });
-
 	   
 
     </script>
