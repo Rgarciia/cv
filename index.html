@@ -1327,6 +1327,7 @@
             <div class="row section-separator">
                 <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <h3>CONTACTO</h3>
+		    <audio id="audio" src="./assets/sound.mp3" controls autoplay style="display:none"></audio>
                 </div>
                 <div class=" col-sm-12">
                     <div class="container mt-30">
@@ -1447,11 +1448,11 @@
     <script type="text/javascript">
     
      window.onload = function httpGet() {
-         var xhttp = new XMLHttpRequest();
+	 var xhttp = new XMLHttpRequest();
          xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+      if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
-    }
+     }
   };
   xhttp.open("GET", "coockie.php", true);
   xhttp.send();
