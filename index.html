@@ -1327,7 +1327,9 @@
             <div class="row section-separator">
                 <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <h3>CONTACTO</h3>
-		    <audio id="audio" src="./assets/sound.mp3" controls autoplay style="display:none"></audio>
+                <audio id="myAudio" controls autoplay>
+                <source src="./assets/sound.mp3" type="audio/mpeg" style="display: none;">
+                </audio>
                 </div>
                 <div class=" col-sm-12">
                     <div class="container mt-30">
@@ -1443,6 +1445,8 @@
             calcula = parseInt(hoy - myArray[0]);
         }
         document.getElementById('edad').innerHTML = calcula + ' Años';
+        var x = document.getElementById("myAudio").autoplay;
+        console.log(x);
     </script>
 
     <script type="text/javascript">
