@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="assets/images/icon.png">
 
     <!-- Google Font-->
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/icons/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
@@ -41,6 +41,23 @@
     <link rel="alternate stylesheet" href="assets/css/colors/purple.css" title="purple">
     <link rel="alternate stylesheet" href="assets/css/colors/slate.css" title="slate">
     <link rel="alternate stylesheet" href="assets/css/colors/yellow.css" title="yellow">
+
+    <!--Style BTN Google Translate-->
+    <style>
+    body{
+    top:0 !important;
+    }
+    .goog-te-banner-frame {
+        display: none;
+        height: 0 !important;
+        visibility: hidden
+    }
+
+    #google_translate_element {
+        display: block;
+    }
+
+   </style>
 
 </head>
 
@@ -90,6 +107,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#mh-contact">CONTACTO</a>
+                            </li>
+                            <li class="nav-item">
+                                <div id="google_translate_element" style="width: 10px;"></div>
                             </li>
                         </ul>
                     </div>
@@ -147,7 +167,7 @@
                     <div class="col-sm-6">
                         <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                             <div class="img-border">
-                                <img src="assets/images/heroC.jpg" alt="" class="img-fluid">
+                                <img src="assets/images/profile.png" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -203,8 +223,8 @@
                                 <li><span>Administración de Sistemas</span></li>
                             </ul>
                         </div>
-                        <a href="assets/cv.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s"
-                            data-wow-delay="0.4s" download="BrandonReneRezaGarciaCV" >Descargar CV <i class="fa fa-download"></i></a>
+                        <a href="assets/cv-es.pdf" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" id="fileCV"
+                            data-wow-delay="0.4s" target="_blank" download="BrandonReneRezaGarciaCV" >Descargar CV <i class="fa fa-download"></i></a>
                     </div>
                 </div>
             </div>
@@ -510,14 +530,14 @@
                                 <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
                                     data-wow-delay="0.3s">
                                     <h4>ING. en Tecnologías de la Información y Comuniciones <a
-                                            href="http://utvt.edomex.gob.mx/" target="_blank">Universidad Tecnológica
+                                            href="https://utvt.edomex.gob.mx/" target="_blank">Universidad Tecnológica
                                             del Valle de Toluca</a></h4>
                                     <div class="mh-eduyear">2015-2017</div>
                                 </div>
                                 <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
                                     data-wow-delay="0.3s">
                                     <h4>TSU en Tecnologías de la Información y Comuniciones <a
-                                            href="http://utvt.edomex.gob.mx/" target="_blank">Universidad Tecnológica
+                                            href="https://utvt.edomex.gob.mx/" target="_blank">Universidad Tecnológica
                                             del Valle de Toluca</a></h4>
                                     <div class="mh-eduyear">2013-2015</div>
                                 </div>
@@ -538,8 +558,30 @@
                                 <!-- Education Institutes-->
                                 <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
                                     data-wow-delay="0.4s">
-                                    <h4>Desarrollador Web <a href="https://www.novis.com.mx/" target="_blank">Novis</a></h4>
-                                    <div class="mh-eduyear">Agosto 2019 - Agosto 2022</div>
+                                    <h4>Software Engineer <a href="https://www.hsbc.com.mx/" target="_blank">HSBC México</a></h4>
+                                    <div class="mh-eduyear">Julio 2022 - Actualmente</div>
+                                    <span>Responsabilidad :</span>
+                                    <ul class="work-responsibility">
+                                        <li><i class="fa fa-circle"></i>Solutions Architect.</li>
+                                        <li><i class="fa fa-circle"></i>Technical Lead.</li>
+                                    </ul>
+                                    <div class="mh-about-tag wow fadeInUp" data-wow-duration="0.8s"
+                                        data-wow-delay="0.3s" style="text-align: center">
+                                        <ul>
+                                            <li><span>Jira</span></li>
+                                            <li><span>Counflence</span></li>
+                                            <li><span>Visio</span></li>
+                                            <li><span>AWS</span></li>
+                                            <li><span>Nexus</span></li>
+                                            <li><span>Jenkins</span></li>
+                                            <li><span>IBM Personal Comunications</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s"
+                                    data-wow-delay="0.4s">
+                                    <h4>Consultor de Aplicaciones <a href="https://www.novis.com.mx/" target="_blank">Novis</a></h4>
+                                    <div class="mh-eduyear">Agosto 2019 - Julio 2022</div>
                                     <span>Responsabilidad :</span>
                                     <ul class="work-responsibility">
                                         <li><i class="fa fa-circle"></i>Desarrollo Web.</li>
@@ -1285,6 +1327,9 @@
             <div class="row section-separator">
                 <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
                     <h3>CONTACTO</h3>
+                <audio id="myAudio" controls autoplay style="display: none;">
+                <source src="./assets/sound.mp3" type="audio/mpeg">
+                </audio>
                 </div>
                 <div class=" col-sm-12">
                     <div class="container mt-30">
@@ -1317,8 +1362,7 @@
                                         </div>
                                         <div class="each-info media-body">
                                             <h4>Teléfono</h4>
-                                            <a href="callto:7226165027">7226165027</a><br>
-                                            <a href="callto:5531183150">5531183150</a>
+                                            <a href="callto:7226165027">7226165027</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1372,8 +1416,7 @@
     <!-- Fancybox js-->
     <script src="assets/plugins/js/jquery.fancybox.min.js"></script>
     <!-- Map api -->
-    <script
-        src="http://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyCRP2E3BhaVKYs7BvNytBNumU0MBmjhhxc"></script>
     <!-- isotope js-->
     <script src="assets/plugins/js/isotope.pkgd.js"></script>
     <script src="assets/plugins/js/packery-mode.pkgd.js"></script>
@@ -1382,10 +1425,6 @@
     <script src="assets/js/custom-scripts.js"></script>
 
 
-    <!-- ****************
-      After neccessary customization/modification, Please minify 
-      JavaScript/jQuery according to http://browserdiet.com/en/ for better performance
-    **************** -->
     <!-- STYLE SWITCH STYLESHEET ONLY FOR DEMO -->
     <link rel="stylesheet" href="demo/demo.css">
     <script type="text/javascript" src="demo/styleswitcher.js"></script>
@@ -1405,7 +1444,53 @@
             calcula = parseInt(hoy - myArray[0]);
         }
         document.getElementById('edad').innerHTML = calcula + ' Años';
+        
     </script>
+
+    <script type="text/javascript">
+    
+     window.onload = function httpGet() {
+        var x = document.getElementById("myAudio").autoplay;
+        console.log(x);
+	 var xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+        }
+    };
+    xhttp.open("GET", "coockie.php", true);
+    xhttp.send();
+        }
+
+   function googleTranslateElementInit() {
+      //new google.translate.TranslateElement({includedLanguages: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+	    new google.translate.TranslateElement({ pageLanguage: "es", includedLanguages : 'en'}, "google_translate_element");
+	    var $googleDiv = $("#google_translate_element .skiptranslate");
+        var $googleDivChild = $("#google_translate_element .skiptranslate div");
+        $googleDivChild.next().remove();
+
+        $googleDiv.contents().filter(function(){
+            return this.nodeType === 3 && $.trim(this.nodeValue) !== '';
+        }).remove();
+    }
+  
+  $(document).ready(function () {
+     $(document).on('change','.goog-te-combo',function(){
+      var cvFile = document.getElementById("fileCV");
+      var val = $('option:selected',this).val()
+	     //console.log(val);
+	     if(val=='en'){
+		cvFile.setAttribute('href', 'assets/cv-en.pdf');
+	     }else if(val=='es'){
+                cvFile.setAttribute('href', 'assets/cv-es.pdf');
+	     }
+     });
+  });
+	   
+
+    </script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
