@@ -44,18 +44,81 @@
 
     <!--Style BTN Google Translate-->
     <style>
-    body{
-    top:0 !important;
-    }
-    .goog-te-banner-frame {
-        display: none;
-        height: 0 !important;
-        visibility: hidden
+    /* ===========================
+   GOOGLE TRANSLATE CUSTOM
+   =========================== */
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+/* Ocultar logo de Google */
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget span {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+    font-size: 0 !important;
+}
+
+/* Eliminar banner superior */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+/* Select principal */
+.goog-te-combo {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    cursor: pointer !important;
+    outline: none !important;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.goog-te-combo:hover {
+    border-color: #00d9c0 !important;
+}
+
+/* Focus */
+.goog-te-combo:focus {
+    border-color: #00d9c0 !important;
+    box-shadow: 0 0 10px rgba(0,217,192,.3);
+}
+
+/* Opciones desplegables */
+.goog-te-combo option {
+    color: #000;
+}
+
+/* Ajuste responsivo */
+@media(max-width:768px){
+    .language-selector {
+        margin-top: 10px;
+        margin-left: 0;
     }
 
-    #google_translate_element {
-        display: block;
+    .goog-te-combo {
+        width: 100%;
     }
+}
 
    </style>
 
@@ -108,8 +171,8 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#mh-contact">CONTACTO</a>
                             </li>
-                            <li class="nav-item">
-                                <div id="google_translate_element" style="width: 10px;"></div>
+                            <li class="nav-item language-selector">
+                                 <div id="google_translate_element"></div>
                             </li>
                         </ul>
                     </div>
